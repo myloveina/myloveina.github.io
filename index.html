@@ -164,7 +164,7 @@
             min-height: 400px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             position: relative;
-            overflow: hidden;
+            overflow: visible;
         }
         
         .tab-content {
@@ -206,8 +206,13 @@
             transition: max-height 0.5s ease;
         }
         
+        .letter-content p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
         .letter.expanded .letter-content {
-            max-height: 500px;
+            max-height: 1000px;
         }
         
         /* Music Tab */
@@ -317,6 +322,7 @@
         @media (max-width: 768px) {
             .welcome-message {
                 font-size: 36px;
+                padding: 0 20px;
             }
             
             .tabs {
@@ -331,6 +337,22 @@
             
             .gallery {
                 grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .content-area {
+                padding: 20px;
+            }
+            
+            .letter-content {
+                font-size: 15px;
+            }
+            
+            .letter.expanded .letter-content {
+                max-height: 1500px;
+            }
+            
+            .letter h3 {
+                font-size: 24px;
             }
         }
     </style>
@@ -376,15 +398,14 @@
                         <h3>Писмо За Теб</h3>
                         <span>👇 Кликни да отвориш</span>
                     </div>
-                   <div class="letter-content">
-    <p>Любов моя,</p>
-    <p>Обичам те безкрайно много принцесо, Колкото и много да ми се сърдиш понякога аз, не искам денят ни да завършва докато сме скарани. Искам винаги да се разбираме.</p>
-    <p>Откакто ти си в живота ми се опитвам, да се стремя винаги да съм по-добър — и за теб и за себе си. Може да не съм перфектен но, за теб ще стана.</p>
-    <p>Ти си най-прекрасното нещо, което някога ми се е случвало. Обичам те така  както никога не съм обичал никого истински, дълбоко.</p>
-    <p>Усмихвай се по-често защото усмивката ти те прави още по-красива. И не забравяй, че дори когато се съмняваш в нещо аз, мисля за теб постоянно и нямам търпение да продължа живота си с теб. ❤️</p>
-    <p>Завинаги твой,</p>
-    <p>C</p>
-</div>
+                    <div class="letter-content">
+                        <p>Любов моя,</p>
+                        <p>Обичам те безкрайно много принцесо, Колкото и много да ми се сърдиш понякога аз, не искам денят ни да завършва докато сме скарани. Искам винаги да се разбираме.</p>
+                        <p>Откакто ти си в живота ми се опитвам, да се стремя винаги да съм по-добър — и за теб и за себе си. Може да не съм перфектен но, за теб ще стана.</p>
+                        <p>Ти си най-прекрасното нещо, което някога ми се е случвало. Обичам те така  както никога не съм обичал никого истински, дълбоко.</p>
+                        <p>Усмихвай се по-често защото усмивката ти те прави още по-красива. И не забравяй, че дори когато се съмняваш в нещо аз, мисля за теб постоянно и нямам търпение да продължа живота си с теб. ❤️</p>
+                        <p>Завинаги твой,</p>
+                        <p>C</p>
                     </div>
                 </div>
             </div>
@@ -395,7 +416,7 @@
                 <div class="song">
                     <div class="song-icon">🎵</div>
                     <div class="song-info">
-                        <h4>Shape of My Heart </h4>
+                        <h4>Shape of My Heart</h4>
                         <p>от Sting</p>
                     </div>
                 </div>
@@ -427,22 +448,22 @@
                 <h2>Цветя за теб</h2>
                 <div class="gallery">
                     <div class="gallery-item">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/73632299-5dde-4ded-805a-88a7dcb4b5e4.png" alt="Красиви розови лалета в стъклена ваза с утринна роса">
+                        <img src="https://images.unsplash.com/photo-1520763185298-1b434c919102?w=600&h=600&fit=crop" alt="Красиви розови лалета">
                     </div>
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1520763185298-1b434c919102?w=400" alt="Поле от розови лалета">
+                        <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&h=600&fit=crop" alt="Букет от червени и розови лалета">
                     </div>
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=400" alt="Букет от червени и розови лалета">
+                        <img src="https://images.unsplash.com/photo-1523693916903-027d144a2b7d?w=600&h=600&fit=crop" alt="Жълти и розови лалета в градина">
                     </div>
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1523693916903-027d144a2b7d?w=400" alt="Жълти и розови лалета в градина">
+                        <img src="https://images.unsplash.com/photo-1517839818447-feeb003f5de7?w=600&h=600&fit=crop" alt="Бели лалета с розови краища">
                     </div>
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1517839818447-feeb003f5de7?w=400" alt="Бели лалета с розови краища">
+                        <img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?w=600&h=600&fit=crop" alt="Лилави лалета на поле">
                     </div>
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?w=400" alt="Лилави лалета на поле">
+                        <img src="https://images.unsplash.com/photo-1524386416438-98b9b2d4b433?w=600&h=600&fit=crop" alt="Поле от цветни лалета">
                     </div>
                 </div>
             </div>
@@ -466,9 +487,8 @@
             const submitPassword = document.getElementById('submitPassword');
             
             submitPassword.addEventListener('click', function() {
-                // Enter your date in format: DD.MM.YYYY or DDMMYYYY or DD/MM/YYYY
                 const enteredValue = passwordInput.value.replace(/[.\/-]/g, '');
-                const correctPassword = '26122024'; // Replace YOURDATE with your actual date (e.g., '14022020')
+                const correctPassword = '26122024';
                 
                 if (enteredValue === correctPassword) {
                     passwordModal.style.opacity = '0';
@@ -490,12 +510,11 @@
                     passwordInput.style.borderColor = '#ff4d4d';
                     setTimeout(() => {
                         passwordInput.style.borderColor = '#ffb7c5';
-                        passwordInput.placeholder = 'Нашият ден...';
+                        passwordInput.placeholder = 'нашата дата...';
                     }, 1500);
                 }
             });
             
-            // Allow Enter key to submit password
             passwordInput.addEventListener('keypress', function(e) {
                 if (e.key === 'Enter') {
                     submitPassword.click();
@@ -510,11 +529,9 @@
                 tab.addEventListener('click', function() {
                     const targetTab = this.getAttribute('data-tab');
                     
-                    // Update active tab
                     tabs.forEach(t => t.classList.remove('active'));
                     this.classList.add('active');
                     
-                    // Show corresponding content
                     tabContents.forEach(content => {
                         content.classList.remove('active');
                         if (content.id === targetTab) {
@@ -558,4 +575,3 @@
     </script>
 </body>
 </html>
-
