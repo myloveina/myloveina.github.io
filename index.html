@@ -82,11 +82,47 @@
             cursor: pointer;
             font-size: 16px;
             transition: background 0.3s, transform 0.2s;
+            width: 100%;
+            margin-bottom: 10px;
         }
         
         .submit-btn:hover {
             background: #b71550;
             transform: scale(1.05);
+        }
+        
+        .baby-btn {
+            background: transparent;
+            color: #d81b60;
+            border: 2px solid #ffb7c5;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        
+        .baby-btn:hover {
+            background: #fff5f7;
+            border-color: #d81b60;
+            transform: scale(1.02);
+        }
+        
+        .hint-message {
+            margin-top: 15px;
+            padding: 15px;
+            background: #fff5f7;
+            border-radius: 10px;
+            border-left: 4px solid #d81b60;
+            font-size: 14px;
+            color: #8a1c4a;
+            display: none;
+            animation: slideIn 0.5s ease;
+        }
+        
+        .hint-message.show {
+            display: block;
         }
         
         /* Welcome Screen */
@@ -306,6 +342,11 @@
             to { opacity: 1; transform: translateY(0); }
         }
         
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.05); }
@@ -364,6 +405,10 @@
             <h2>Напиши нашата дата</h2>
             <input type="text" class="password-input" id="passwordInput" placeholder="нашата дата...">
             <button class="submit-btn" id="submitPassword">Влез</button>
+            <button class="baby-btn" id="babyButton">😂 За смешните бебета които не знаят</button>
+            <div class="hint-message" id="hintMessage">
+                Добре ще ти кажа... Нашата дата е: <strong>26.12.2024</strong> 😏<br>
+            </div>
         </div>
     </div>
     
@@ -485,6 +530,13 @@
             const mainContent = document.getElementById('mainContent');
             const passwordInput = document.getElementById('passwordInput');
             const submitPassword = document.getElementById('submitPassword');
+            const babyButton = document.getElementById('babyButton');
+            const hintMessage = document.getElementById('hintMessage');
+            
+            // Baby button click - shows the password hint
+            babyButton.addEventListener('click', function() {
+                hintMessage.classList.toggle('show');
+            });
             
             submitPassword.addEventListener('click', function() {
                 const enteredValue = passwordInput.value.replace(/[.\/-]/g, '');
@@ -575,4 +627,3 @@
     </script>
 </body>
 </html>
-
