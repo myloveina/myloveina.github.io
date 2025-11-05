@@ -286,6 +286,31 @@
             border-left: 4px solid #d81b60;
         }
         
+        .note img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .note img:hover {
+            transform: scale(1.02);
+        }
+        
+        .note a {
+            color: #d81b60;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .note a:hover {
+            text-decoration: underline;
+        }
+        
         /* Gallery Tab */
         .gallery {
             display: grid;
@@ -395,6 +420,10 @@
             .letter h3 {
                 font-size: 24px;
             }
+            
+            .note img {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -485,6 +514,12 @@
                 </div>
                 <div class="note">
                     <p>Напомням ти, че си най-прекрасното нещо в живота ми.</p>
+                </div>
+                <div class="note">
+                    <p>А и да бебe реших една листовка ето:</p>
+                    <a href="https://i.ibb.co/FL7YHJ2P/telegram-cloud-photo-size-2-5213476405243481808-y.jpg" target="_blank">
+                        <img src="https://i.ibb.co/FL7YHJ2P/telegram-cloud-photo-size-2-5213476405243481808-y.jpg" alt="Листовка">
+                    </a>
                 </div>
             </div>
             
@@ -627,5 +662,3 @@
     </script>
 </body>
 </html>
-
-
